@@ -8,8 +8,8 @@ initializeTable().catch((error: unknown) => {
 });
 
 export const metadata: Metadata = {
-  title: "IFSA Investment",
-  description: "Build wealth through smart investments",
+  title: "Amira Gold Store",
+  description: "Build wealth through smart investments in gold",
 };
 
 export default function RootLayout({

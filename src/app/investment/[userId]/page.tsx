@@ -305,7 +305,7 @@ View Full Size
             </a> */}
             
             <a
-              href={`https://t.me/amiraseller?text=${generateTelegramMessage()}`}
+              href={`https://t.me/amira_aldahab8391?text=${generateTelegramMessage()}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
@@ -352,11 +352,11 @@ View Full Size
                   </div>
                   <div>
                     <p className="text-sm font-medium text-slate-800">Telegram Username</p>
-                    <p className="text-xs text-slate-500">@ifsa_investments_support</p>
+                    <p className="text-xs text-slate-500">@amira_aldahab8391</p>
                   </div>
                 </div>
                 <button
-                  onClick={() => copyToClipboard('@ifsa_investments_support', 'telegram')}
+                  onClick={() => copyToClipboard('@amira_aldahab8391', 'telegram')}
                   className="px-3 py-1 text-xs bg-slate-100 text-slate-700 rounded hover:bg-slate-200 transition-colors"
                 >
                   {copiedTelegram ? 'Copied!' : 'Copy'}

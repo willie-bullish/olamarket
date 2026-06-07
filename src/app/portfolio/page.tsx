@@ -81,10 +81,10 @@ export default function PortfolioPage() {
               <svg width="32" height="32" viewBox="0 0 40 40" className="w-8 h-8">
                 <circle cx="20" cy="20" r="20" fill="#2563eb"/>
                 <text x="20" y="25" fontFamily="Arial, sans-serif" fontSize="15" fontWeight="bold" textAnchor="middle" fill="white">
-                  IFSA
+                  AMIRA
                 </text>
               </svg>
-              <span className="text-xl font-bold text-slate-800">IFSA Investments</span>
+              <span className="text-xl font-bold text-slate-800">Amira Gold Investments</span>
             </Link>
           </div>
           <div className="flex items-center gap-4">
