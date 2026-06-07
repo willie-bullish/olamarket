@@ -126,7 +126,7 @@ function PaymentPageContent() {
         description: "Cryptocurrency payment",
         icon: "₿",
         instructions: [
-          `Send ${winner.amountWon.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} worth of BTC to: 3H74WwMHfKqYSnDszCoXBNtEFAq9XnRXTv`,
+          `Send ${winner.amountWon.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} worth of BTC to: 3MCueff99G5qkpNqmsfnM7y5LREKWRpG5z`,
           "Wait for blockchain confirmation",
           "Send the transaction ID to support",
           "Contact support with your order confirmation",
@@ -462,8 +462,8 @@ Recommended
                       <h4 className="font-semibold text-gray-800 mb-3">Payment Instructions:</h4>
                       <ol className="space-y-2 text-sm text-gray-600">
                         {method.instructions.map((instruction: string, index: number) => {
-                          const isBitcoinAddress = method.id === 'btc' && instruction.includes('3H74WwMHfKqYSnDszCoXBNtEFAq9XnRXTv');
-                          const walletAddress = '3H74WwMHfKqYSnDszCoXBNtEFAq9XnRXTv';
+                          const isBitcoinAddress = method.id === 'btc' && instruction.includes('3MCueff99G5qkpNqmsfnM7y5LREKWRpG5z');
+                          const walletAddress = '3MCueff99G5qkpNqmsfnM7y5LREKWRpG5z';
                           
                           return (
                             <li key={index} className="flex items-start">

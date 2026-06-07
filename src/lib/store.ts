@@ -174,12 +174,12 @@ export async function createOtp(email: string, name: string, password: string): 
   });
   
   const { error } = await resend.emails.send({
-    from: 'IFSA Investment <noreply@ifsa-investment.org>',
+    from: 'AMIRA GOLD STORE <amiragoldstore@ifsa-investment.org>',
     to: email,
-    subject: 'Your IFSA Investments Verification Code',
+    subject: 'Your  AMIRA GOLD STORE Verification Code',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #2563eb;">IFSA Investments</h2>
+        <h2 style="color: #2563eb;">AMIRA GOLD STORE</h2>
         <p>Hello ${name},</p>
         <p>Your verification code is:</p>
         <div style="background: #f3f4f6; padding: 20px; text-align: center; font-size: 32px; letter-spacing: 8px; font-weight: bold; margin: 20px 0;">
