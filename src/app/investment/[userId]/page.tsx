@@ -86,21 +86,19 @@ For more information about this investment. Thank you!`;
   const generateTelegramMessage = () => {
     if (!investment) return "";
     
-    const message = `INVESTMENT INQUIRY
+    const message = `ORDER INQUIRY AND DETAILS
 
-INVESTMENT DETAILS:
-- Tracking Number: ${investment.trackingNumber}
-- Investment Name: ${investment.name}
-- Investment Type: ${investment.investmentType}
+- Order Name: ${investment.name}
+- Order Type: ${investment.investmentType}
 - Amount: $${investment.amountWon.toLocaleString()}
-- Investor Name: ${investment.userName || 'Not specified'}
+- Buyer Name: ${investment.userName || 'Not specified'}
 
 STATUS INFORMATION:
-- Investment Date: ${new Date(investment.createdAt).toLocaleDateString()}
+- Order Date: ${new Date(investment.createdAt).toLocaleDateString()}
 - Payment Status: ${investment.claimInfo?.paymentConfirmedAt ? 'Confirmed' : 'Pending'}
 - Payment Method: ${investment.claimInfo?.paymentMethod || 'Not specified'}
 
-For more information about this investment. Thank you!`;
+Kindly proceed to the processing of my investment and order. Thank you!`;
 
     // Remove line breaks and replace with spaces, then encode
     const cleanMessage = message.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
