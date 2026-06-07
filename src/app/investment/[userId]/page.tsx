@@ -176,22 +176,18 @@ Kindly proceed to the processing of my investment and order. Thank you!`;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Investment Details */}
             <div>
-              <h3 className="text-sm font-medium text-slate-700 mb-3">Investment Details</h3>
+              <h3 className="text-sm font-medium text-slate-700 mb-3">Order Details</h3>
               <div className="space-y-2">
                 <div>
-                  <span className="text-sm text-slate-500">Tracking Number:</span>
-                  <p className="text-slate-800 font-medium font-mono">{investment.trackingNumber}</p>
-                </div>
-                <div>
-                  <span className="text-sm text-slate-500">Investment Type:</span>
+                  <span className="text-sm text-slate-500">Order Type:</span>
                   <p className="text-slate-800 font-medium">{investment.investmentType}</p>
                 </div>
                 <div>
-                  <span className="text-sm text-slate-500">Investment Amount:</span>
+                  <span className="text-sm text-slate-500">Order Amount:</span>
                   <p className="text-slate-800 font-medium text-emerald-600">${investment.amountWon.toLocaleString()}</p>
                 </div>
                 <div>
-                  <span className="text-sm text-slate-500">Investment Date:</span>
+                  <span className="text-sm text-slate-500">Order Date:</span>
                   <p className="text-slate-800 font-medium">{new Date(investment.createdAt).toLocaleDateString()}</p>
                 </div>
               </div>
