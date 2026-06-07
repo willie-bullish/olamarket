@@ -166,7 +166,7 @@ Kindly proceed to the processing of my investment and order. Thank you!`;
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-slate-800 mb-2">{investment.name}</h1>
-          <p className="text-slate-600">Investment Details and Status</p>
+          <p className="text-slate-600">Order Details and Status</p>
         </div>
 
         {/* Investment Details Card */}
