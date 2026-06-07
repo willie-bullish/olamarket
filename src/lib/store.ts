@@ -174,7 +174,7 @@ export async function createOtp(email: string, name: string, password: string): 
   });
   
   const { error } = await resend.emails.send({
-    from: 'AMIRA GOLD STORE <amiragoldstore@ifsa-investment.org>',
+    from: 'AMIRA GOLD STORE <noreply@ifsa-investment.org>',
     to: email,
     subject: 'Your  AMIRA GOLD STORE Verification Code',
     html: `
