@@ -282,7 +282,7 @@ Process my investment and confirm the next steps. Thank you!`;
             </a> */}
             
             <a
-              href={`https://t.me/amiraseller?text=${generateTelegramMessage()}`}
+              href={`https://t.me/amira_aldahab8391?text=${generateTelegramMessage()}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"

