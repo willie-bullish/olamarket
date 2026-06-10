@@ -48,6 +48,7 @@ export default function AdminPage() {
   const [name, setName] = useState("");
   const [amountWon, setAmountWon] = useState("");
   const [winners, setWinners] = useState<Winner[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
@@ -58,6 +59,16 @@ export default function AdminPage() {
       if (res.ok) setWinners(data);
     } catch {
       setWinners([]);
+    }
+  }, []);
+
+  const fetchUsers = useCallback(async () => {
+    try {
+      const res = await fetch("/api/admin/users");
+      const data = await res.json();
+      if (res.ok) setUsers(data);
+    } catch {
+      setUsers([]);
     }
   }, []);
 
@@ -75,7 +86,8 @@ export default function AdminPage() {
     }
 
     fetchWinners();
-  }, [fetchWinners, router]);
+    fetchUsers();
+  }, [fetchWinners, fetchUsers, router]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -181,6 +193,46 @@ export default function AdminPage() {
                             Pending
                           </span>
                         )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mt-8">
+          <div className="px-6 py-4 border-b border-slate-200">
+            <h2 className="text-lg font-semibold text-slate-800">Registered Users</h2>
+          </div>
+          {users.length === 0 ? (
+            <p className="px-6 py-8 text-slate-500 text-center">No registered users yet</p>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-slate-50 text-left text-sm text-slate-600">
+                    <th className="px-6 py-3 font-medium">Name</th>
+                    <th className="px-6 py-3 font-medium">Email</th>
+                    <th className="px-6 py-3 font-medium">Registration Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {users.map((user) => (
+                    <tr key={user.id} className="border-t border-slate-100">
+                      <td className="px-6 py-3 text-slate-800 font-medium">
+                        {user.name}
+                      </td>
+                      <td className="px-6 py-3 text-slate-600">
+                        {user.email}
+                      </td>
+                      <td className="px-6 py-3 text-slate-600">
+                        {new Date(user.createdAt).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}
                       </td>
                     </tr>
                   ))}
